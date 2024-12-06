@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Item</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/add-item.css">
+</head>
+
+<body>
+    <div id="liveAlertPlaceholder"></div>
+    <div class="container mt-5">
+        <h1 class="text-center">Atualizar Item</h1>
+
+        <div class="form-group">
+            <label for="item-quality">Material</label>
+            <select class="form-select" aria-label="Selecione o Material" id="material" required>
+                <option selected>Selecione o Material</option>
+                <option value="Acetato">Acetato</option>
+                <option value="Metal">Metal</option>
+                <option value="Plástico">Plástico</option>
+                <option value="Titanio">Titânio</option>
+                <option value="Madeira">Madeira</option>
+                <option value="Aluminio">Alumínio</option>
+                <option value="Bambu">Bambu</option>
+                <option value="Nylon">Nylon</option>
+                <option value="Carbono">Carbono</option>
+                <option value="Armação combinada">Armação combinada (Metal + Acetato)</option>
+                <option value="Resina">Resina</option>
+                <option value="Policarbonato">Policarbonato</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="item-material">Tamanho</label>
+            <select class="form-select" aria-label="Selecione o Tamanho da Armação" id="tamanho">
+                <option selected>Selecione o Tamanho da Armação</option>
+                <option value="40">40mm</option>
+                <option value="42">42mm</option>
+                <option value="44">44mm</option>
+                <option value="46">46mm</option>
+                <option value="48">48mm</option>
+                <option value="50">50mm</option>
+                <option value="52">52mm</option>
+                <option value="54">54mm</option>
+                <option value="56">56mm</option>
+                <option value="58">58mm</option>
+                <option value="60">60mm</option>
+                <option value="62">62mm</option>
+                <option value="64">64mm</option>
+                <option value="66">66mm</option>
+            </select>
+        </div>
+        <label for="item-quality">Genero</label>
+        <div class="form-group">
+            <select class="form-select" aria-label="Selecione Genero" id="genero">
+                <option selected>Selecione o Gênero</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Feminino">Unissex</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="item-value">Marca</label>
+            <select class="form-select" aria-label="Selecione a Empresa" id="marca" required>
+                <option selected>Selecione a Empresa</option>
+                <option value="Ray-Ban">Ray-Ban</option>
+                <option value="Oakley">Oakley</option>
+                <option value="Gucci">Gucci</option>
+                <option value="Prada">Prada</option>
+                <option value="Maui Jim">Maui Jim</option>
+                <option value="Persol">Persol</option>
+                <option value="Carrera">Carrera</option>
+                <option value="Tom Ford">Tom Ford</option>
+                <option value="Costa Del Mar">Costa Del Mar</option>
+                <option value="Nike Vision">Nike Vision</option>
+                <option value="Smith Optics">Smith Optics</option>
+                <option value="Vogue Eyewear">Vogue Eyewear</option>
+                <option value="Arnette">Arnette</option>
+                <option value="Fendi">Fendi</option>
+                <option value="Chanel">Chanel</option>
+                <option value="Lacoste">Lacoste</option>
+                <option value="Bvlgari">Bvlgari</option>
+                <option value="Marc Jacobs">Marc Jacobs</option>
+                <option value="Kate Spade">Kate Spade</option>
+                <option value="Michael Kors">Michael Kors</option>
+                <option value="Ray-Ban">Ray-Ban</option>
+                <option value="Prada">Prada</option>
+                <option value="Ted Baker">Ted Baker</option>
+                <option value="Replay">Replay</option>
+                <option value="Tommy Hilfiger">Tommy Hilfiger</option>
+                <option value="Hugo Boss">Hugo Boss</option>
+                <option value="Coach">Coach</option>
+                <option value="Saint Laurent">Saint Laurent</option>
+                <option value="Dolce & Gabbana">Dolce & Gabbana</option>
+                <option value="Burberry">Burberry</option>
+                <option value="Tory Burch">Tory Burch</option>
+                <option value="Chloe">Chloe</option>
+                <option value="Polaroid">Polaroid</option>
+                <option value="Swarovski">Swarovski</option>
+                <option value="Bose">Bose</option>
+                <option value="Hawkers">Hawkers</option>
+                <option value="Vuarnet">Vuarnet</option>
+                <option value="Blenders Eyewear">Blenders Eyewear</option>
+                <option value="Warby Parker">Warby Parker</option>
+                <option value="EyeBuyDirect">EyeBuyDirect</option>
+                <option value="GlassesUSA">GlassesUSA</option>
+                <option value="Zenni Optical">Zenni Optical</option>
+                <option value="Shwood">Shwood</option>
+                <option value="Oliver Peoples">Oliver Peoples</option>
+                <option value="Superdry">Superdry</option>
+                <option value="Polaroid Eyewear">Polaroid Eyewear</option>
+                <option value="Sunglass Hut">Sunglass Hut</option>
+                <option value="Costa">Costa</option>
+                <option value="Ralph Lauren">Ralph Lauren</option>
+                <option value="Smith Optics">Smith Optics</option>
+            </select>            
+        </div>
+        <div class="form-group">
+            <label for="item-marca">Forma</label>
+            <select class="form-select" aria-label="Selecione a Forma" id="forma" required>
+                <option selected>Selecione a Forma</option>
+                <option value="Redonda">Redonda</option>
+                <option value="Aviador">Aviador</option>
+                <option value="Retangular">Retangular</option>
+                <option value="Quadrada">Quadrada</option>
+                <option value="Wayfarer">Wayfarer</option>
+                <option value="Cat Eye">Cat Eye</option>
+                <option value="Geometrica">Geométrica</option>
+                <option value="Oversized">Oversized</option>
+                <option value="Narrow">Narrow</option>
+                <option value="Panto">Panto</option>
+                <option value="Butterfly">Butterfly</option>
+                <option value="Sport">Sport</option>
+                <option value="Shield">Shield</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="item-color">Valor</label>
+            <input type="text" class="form-control" id="valor" required>
+        </div>
+    
+        <button type="submit" class="btn btn-primary btn-block" onclick="update('<%= oculo.Id_oculos %>')">Atualizar Item</button>
+
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-secondary">Voltar para o Estoque</a>
+        </div>
+    </div>
+
+    <script src="../../javascript/oculos_alert_update.js"></script>
+</body>
+
+</html>

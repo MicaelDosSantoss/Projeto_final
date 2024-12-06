@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Sistema de Estoque</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <%- include('../partials/header.ejs')%>
+
+        <div class="container mt-5">
+            <h1 class="text-center">Sistema de Estoque</h1>
+
+            <!-- Barra de pesquisa -->
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <input type="text" id="search-bar" class="form-control" placeholder="Pesquisar produto..."
+                        onkeyup="searchItem()">
+                </div>
+            </div>
+
+            <!-- Botão para adicionar item -->
+            <div class="text-center mt-4">
+                <a href="/estoque/created" class="btn btn-primary">Adicionar Item</a>
+            </div>
+
+            <!-- Tabela de Itens -->
+
+            <div class="row mt-4">
+                <div class="col-md-10 offset-md-1">
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>ID oculos</th>
+                                <th>ID alas</th>
+                                <th>Status</th>
+                                <th>Métodos</th>
+                            </tr>
+
+                        </thead>
+                        <% if (getAll && getAll.length> 0) {%>
+                            <% getAll.forEach( get => { %>
+                                <tbody id="inventory-table-body">
+                                    <th>
+                                        <%= get.Id_Ala_Oculos %>
+                                    </th>
+                                    <th>
+                                        <%= get.Id_Ala_fk %>
+                                    </th>
+                                    <th>
+                                        <%= get.Id_oculos_fk %>
+                                    </th>
+                                    <th>
+                                        <%= get.status %>
+                                    </th>
+                                    <th>
+                                        <a class="btn btn-warning btn-sm" href="/estoque/update/<%= get.Id_Ala_Oculos %>">Upgrade</a>
+                                        <button class="btn btn-danger btn-sm" onclick="deleteEstoque('<%= get.Id_Ala_Oculos %>')">Remover</button>
+                                    </th>
+                                    <%})%>
+                                    <%}%>
+                                            <!-- Os itens do estoque serão exibidos aqui -->
+                                </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="../../javascript_estoque/estoque.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Item</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/add-item.css">
+</head>
+
+<body>
+    <div id="liveAlertPlaceholder"></div>
+    
+    <div class="container mt-5">
+        <h1 class="text-center">Atualizar Localização</h1>
+
+
+        <div class="form-group">
+            <label for="item-color">ID Oculos</label>
+            <select class="form-select" aria-label="Selecione o Id Oculos" id="Id_oculos" name="Id_Oculos">
+                <option selected>Selecione o Id Oculos</option>
+                <% getOculos.forEach(oculos => { %>
+                    <option value="<%= oculos.Id_oculos %>"><%= oculos.Id_oculos %></option>
+                <% }) %>
+            </select>
+        </div>
+
+       
+            <div class="form-group">
+                <label for="item-color">ID Ala</label>
+                <select class="form-select" aria-label="Selecione o Id Ala" id="Id_Ala" name="Id_Ala">
+                    <option selected>Selecione o Id Ala</option>
+                    <% getAlas.forEach(ala => { %>
+                        <option value="<%= ala.Id_Ala %>" required><%= ala.Id_Ala %></option>
+                    <% }) %>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="item-color">Status</label>
+                <select class="form-select" aria-label="Selecione o status" id="status">
+                    <option selected>Selecione o status</option>
+                    <option value="DISPONÍVEL">DISPONÍVEL</option>
+                    <option value="iNDISPONÍVEL">INDISPONÍVEL</option>
+                </select>
+            </div>
+            <a type="submit" class="btn btn-primary btn-block" onclick="updateLocalizacao('<%= itemAtual.Id_Ala_Oculos%>')">Atualizar Localização</a>
+
+        <div class="text-center mt-4">
+            <a href="/estoque" class="btn btn-secondary">Voltar para o Estoque</a>
+        </div>
+    </div>
+
+    <script src="../../javascript_estoque/estoque_update.js"></script>
+</body>
+
+</html>
